@@ -3,7 +3,9 @@
 ## Cryptomus Paymenter Extension
 
 This is an extension for **Paymenter**, allowing merchants to integrate **Cryptomus** as a payment gateway.  
-The extension enables customers to pay using **cryptocurrencies** while automating **payment status updates**. Signup [here](https://app.cryptomus.com/signup/?ref=74l2Z8) if you don't have a Cryptomus account.
+The extension enables customers to pay using **cryptocurrencies** while automating **payment status updates**. 
+
+Signup [here](https://app.cryptomus.com/signup/?ref=74l2Z8) if you don't have a Cryptomus account.
 
 ---
 
