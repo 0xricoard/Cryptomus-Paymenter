@@ -11,7 +11,7 @@ The extension enables customers to pay using **cryptocurrencies** while automati
 
 ✅ **Secure payment processing** via Cryptomus  
 ✅ **Automatic payment status updates** via webhooks  
-✅ **Supports multiple cryptocurrencies**  
+✅ **Supports multiple cryptocurrencies** 
 ✅ **Implements signature verification** for security  
 ✅ **Works with Paymenter v0.9**  
 
