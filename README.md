@@ -80,7 +80,7 @@ Cryptomus sends **webhook notifications** when **payment status** changes. This 
     storage/logs/laravel.log
     ```
 
-- Verify webhook requests in Cryptomus Dashboard → Logs
+- Verify webhook requests in Cryptomus Business -> Payments -> Webhook logs
 
 3️⃣ Still having issues?
 - Open a GitHub Issue or join Paymenter Discord
