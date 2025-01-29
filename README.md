@@ -91,4 +91,4 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Developed by 0xricoard | servermikro.com
+Developed by 0xricoard
