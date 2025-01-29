@@ -16,7 +16,7 @@ class Cryptomus extends Gateway
     {
         return [
             'display_name' => 'Cryptomus',
-            'version'      => '1.0.2',
+            'version'      => '1.0.3',
             'author'       => '0xricoard',
             'website'      => 'https://servermikro.com',
         ];
@@ -64,6 +64,7 @@ class Cryptomus extends Gateway
             'amount' => number_format($total, 2, '.', ''),
             'currency' => $currency,
             'order_id' => (string) $invoiceId,
+            'is_refresh' => true,
             'url_callback' => url('/extensions/cryptomus/webhook'),
             'url_return' => route('clients.invoice.show', $invoiceId),
             'url_success' => route('clients.invoice.show', $invoiceId),
