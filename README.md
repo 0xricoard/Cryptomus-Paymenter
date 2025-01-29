@@ -3,17 +3,17 @@
 ## Cryptomus Paymenter Extension
 
 This is an extension for **Paymenter**, allowing merchants to integrate **Cryptomus** as a payment gateway.  
-The extension enables customers to pay using **cryptocurrencies** while automating **payment status updates**.
+The extension enables customers to pay using **cryptocurrencies** while automating **payment status updates**. Signup [here](https://app.cryptomus.com/signup/?ref=74l2Z8) if you don't have a Cryptomus account.
 
 ---
 
 ## 🚀 Features
 
-✅ **Secure payment processing** via Cryptomus  
-✅ **Automatic payment status updates** via webhooks  
-✅ **Supports multiple cryptocurrencies** 
-✅ **Implements signature verification** for security  
-✅ **Works with Paymenter v0.9**  
+- ✅ **Secure payment processing** via Cryptomus  
+- ✅ **Automatic payment status updates** via webhooks  
+- ✅ **Supports multiple cryptocurrencies** 
+- ✅ **Implements signature verification** for security  
+- ✅ **Works with Paymenter v0.9**  
 
 ---
 
@@ -34,7 +34,9 @@ Navigate to **Admin Panel → Settings → Extension Settings**, then:
 
 1. The default **webhook URL** is:  
 
-https://yourdomain.com/extensions/cryptomus/webhook
+    ```
+    https://yourdomain.com/extensions/cryptomus/webhook
+    ```
 
 2. *(Optional)* Ensure you **whitelist Cryptomus IP**: `91.227.144.54`  
 
@@ -43,10 +45,10 @@ https://yourdomain.com/extensions/cryptomus/webhook
 ## 🛠️ Configuration Options  
 
 | Option       | Description                         | Required |
-|-------------|-------------------------------------|----------|
-| `api_key`   | Your **Cryptomus API Key**         | ✅        |
-| `merchant_id` | Your **Merchant ID** from Cryptomus | ✅        |
-| `currency`  | Default currency (e.g. `IDR`, `EUR`, `GBP` default:`USD`)    | ✅        |
+|--------------|-------------------------------------|----------|
+| `api_key`    | Your **Cryptomus API Key**          | ✅        |
+| `merchant_id`| Your **Merchant ID** from Cryptomus | ✅        |
+| `currency`   | Default currency (e.g. `IDR`, `EUR`, `GBP`, default: `USD`) | ✅ |
 
 ---
 
@@ -55,29 +57,31 @@ https://yourdomain.com/extensions/cryptomus/webhook
 Cryptomus sends **webhook notifications** when **payment status** changes. This extension:  
 - ✅ **Verifies webhook signatures** using:  
 
-```
-md5(base64_encode(json_encode($data, JSON_UNESCAPED_UNICODE)) . $api_key)
-```
+    ```
+    md5(base64_encode(json_encode($data, JSON_UNESCAPED_UNICODE)) . $api_key)
+    ```
 
-  •	✅ Processes payment statuses:
-  •	🟢 paid → Marks invoice as paid
-  •	🔴 cancel, failed, expired → Logs            failure but does not complete             payment
+- ✅ Processes payment statuses:
+    - 🟢 `paid` → Marks invoice as paid
+    - 🔴 `cancel`, `failed`, `expired` → Logs failure but does not complete payment
 
 ## 💡 Troubleshooting
 
 1️⃣ Webhook signature mismatch?
-	•	Ensure your API Key is correct
-	•	Check if Cryptomus webhook sends escaped JSON data
+- Ensure your API Key is correct
+- Check if Cryptomus webhook sends escaped JSON data
 
 2️⃣ Payment not marked as completed?
-	•	Check Paymenter logs:
+- Check Paymenter logs:
 
-storage/logs/laravel.log
+    ```
+    storage/logs/laravel.log
+    ```
 
-  •	Verify webhook requests in Cryptomus Dashboard → Logs
+- Verify webhook requests in Cryptomus Dashboard → Logs
 
 3️⃣ Still having issues?
-	•	Open a GitHub Issue or join Paymenter Discord
+- Open a GitHub Issue or join Paymenter Discord
 
 ## 📝 License
 
